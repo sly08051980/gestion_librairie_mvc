@@ -18,3 +18,10 @@ color: red;
     background-color: blue;
 
 }
+th{
+    padding-right: 2em;
+}
+
+tr td{
+    border: 1px black;
+}

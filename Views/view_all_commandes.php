@@ -7,9 +7,7 @@
         <th>Date_achat</th>
         <th>Prix_achat</th>
         <th>Nbr_exemplaires</th>
-
-        
-   
+  
     </thead>
     <?php  foreach($commandes as $c ): ?>
     <tr>
@@ -22,5 +20,4 @@
     </tr>
     <?php endforeach; ?>
 </table>
-</div>            
-              
+</div>
