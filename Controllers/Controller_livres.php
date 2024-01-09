@@ -20,5 +20,54 @@ class Controller_livres extends Controller
 
     }
 
-    
+    public function action_all_titres()
+    {
+        $m=Model::get_model();
+        $data=['titres'=>$m->get_all_titres()];
+        $this->render("all_titres",$data);
+
+    }
+
+    public function action_all_find_titres()
+    {
+      
+        $m=Model::get_model();
+        $data=['findtitres'=>$m->get_all_find_titres()];
+        $this->render("all_find_titres",$data);
+
+    }
+    public function action_all_auteur()
+    {
+      
+        $m=Model::get_model();
+        $data=['auteur'=>$m->get_all_auteur()];
+        $this->render("all_auteur",$data);
+
+    }
+
+    public function action_all_find_auteur()
+    {
+      
+        $m=Model::get_model();
+        $data=['findauteur'=>$m->get_all_find_auteur()];
+        $this->render("all_find_auteur",$data);
+
+    }
+    public function action_all_editeur()
+    {
+      
+        $m=Model::get_model();
+        $data=['editeur'=>$m->get_all_editeur()];
+        $this->render("all_editeur",$data);
+
+    }
+
+    public function action_all_find_editeur()
+    {
+      
+        $m=Model::get_model();
+        $data=['findediteur'=>$m->get_all_find_editeur()];
+        $this->render("all_find_editeur",$data);
+
+    }
 }

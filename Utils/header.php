@@ -20,10 +20,12 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav nav couleur">
 
-
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="?controller=home&action=home">Accueil</a>
+                        </li>
 
                         <li class="nav-item dropdown ">
                             <a class="nav-link dropdown-toggle" href="?controller=livres&action=all_livres"
@@ -31,8 +33,14 @@
                                 aria-expanded="false">
                                 Livres
                             </a>
-                            <ul class="dropdown-menu couleurbleu" aria-labelledby="navbarDropdownMenuLink" >
+                            <ul class="dropdown-menu couleurbleu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="liens" href="?controller=livres&action=all_livres">Tous les livres</a>
+                                </li>
+                                <li><a class="liens" href="?controller=livres&action=all_titres">Par titre</a>
+                                </li>
+                                <li><a class="liens" href="?controller=livres&action=all_auteur">Par Auteur</a>
+                                </li>
+                                <li><a class="liens" href="?controller=livres&action=all_editeur">Par Editeur</a>
                                 </li>
 
                             </ul>
@@ -46,6 +54,10 @@
                             <ul class="dropdown-menu couleurbleu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="liens" href="?controller=fournisseurs&action=all_fournisseurs">Tous les
                                         Fournisseurs</a></li>
+                                        <li><a class="liens" href="?controller=fournisseurs&action=all_fournisseurs_raison_social">Raison Social</a></li>
+                                        <li><a class="liens" href="?controller=fournisseurs&action=all_fournisseurs_localite">Localité</a></li>
+                                        <li><a class="liens" href="?controller=fournisseurs&action=all_fournisseurs_pays">pays</a></li>
+                                        
 
                             </ul>
                         </li>
@@ -58,6 +70,9 @@
                             <ul class="dropdown-menu couleurbleu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="liens" href="?controller=commandes&action=all_commandes">Toutes les
                                         commandes</a></li>
+                                        <li><a class="liens" href="?controller=commandes&action=all_commandes_editeurs">Commande Par editeur</a></li>
+                                        <li><a class="liens" href="?controller=commandes&action=all_commandes_fournisseurs">Commande Par fournisseur</a></li>
+                                        <li><a class="liens" href="?controller=commandes&action=all_commandes_dates">Commande Par dates</a></li>
 
                             </ul>
                         </li>
@@ -65,7 +80,6 @@
                 </div>
             </div>
         </nav>
-
 
 
 
