@@ -14,6 +14,8 @@ abstract class Controller		//Ceci est le controleur par defaut
 			else $this->action_default();			//sinon action par défaut
 		}
 
+
+
 	protected function render($vue,$data=[])		//Fonction qui recupere les données et les transmet a la vu
 	{
 		extract($data);								//Recupération des données à afficher

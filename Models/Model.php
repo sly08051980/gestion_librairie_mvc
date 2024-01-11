@@ -316,13 +316,31 @@ public function get_home_authentification()
     try {
         $utilisateur = $_POST['utilisateur'];
         $mdp=$_POST['mdp'];
-        $requete=$this->bd->prepare('SELECT nom , MdP FROM utilisateur where nom=:u and MdP =:p ');
+        $requete=$this->bd->prepare('SELECT * FROM utilisateur where nom=:u and MdP =:p ');
         $requete->execute(array(':u'=>$utilisateur,'p'=>$mdp));
+        
+     
         
     } catch (PDOException $e) {
         die('Erreur [' . $e->getCode() . '] : ' . $e->getMessage() . '</p>');
     }
     return $requete->fetchAll(PDO::FETCH_OBJ);
 }
+
+// public function get_session_formulaire_inscription()
+// {
+//     try {
+      
+//    $nom=$_POST['nom'];
+//    $prenom=$_POST['prenom'];
+
+//         $requete=$this->bd->prepare('INSERT INTO utilisateur( nom, prenom, age, Date, MdP, Statut) VALUES ('[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]')');
+//         $requete->execute(array(':u'=>$utilisateur,'p'=>$mdp));
+        
+//     } catch (PDOException $e) {
+//         die('Erreur [' . $e->getCode() . '] : ' . $e->getMessage() . '</p>');
+//     }
+//     return $requete->fetchAll(PDO::FETCH_OBJ);
+// }
 
 }
